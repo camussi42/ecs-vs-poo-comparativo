@@ -5,12 +5,10 @@
 
 using UnityEngine;
 
-/// <summary>
+
 /// Responsável por instanciar e inicializar N bolinhas no início da cena.
-/// </summary>
 public class SpawnerOOP : MonoBehaviour
 {
-    // ── CONFIGURAÇÃO 
     [SerializeField] private GameObject prefabBolinha;
     [SerializeField] private int        quantidade  = 1000;
     [SerializeField] private float      areaSpawn   = 10f;
@@ -27,12 +25,10 @@ public class SpawnerOOP : MonoBehaviour
         }
     }
 
-    /// <summary>
+
     /// Instancia uma bolinha em posição e velocidade aleatórias.
     /// PONTO DE ACOPLAMENTO: Spawner acessa diretamente o componente
-    /// BolinhaFisicaOOP e modifica seu campo `velocidade` — característica
-    /// de acoplamento forte (CBO elevado) típica do OOP.
-    /// </summary>
+
     private void InstanciarBolinha()
     {
         Vector3 posicaoInicial = new Vector3(
